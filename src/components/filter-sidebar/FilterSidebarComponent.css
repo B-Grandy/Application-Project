@@ -1,0 +1,14 @@
+.form-alt-row-outlined{
+    border: 1px solid  #a1c2e2;
+    margin: .5rem 0;
+    border-radius: 5px;
+    padding: 1rem 1rem;
+    height:auto;
+
+}
+.small-text{
+    font-weight: 700;
+    font-size: .8rem;
+    margin-top: 1rem;
+    color: #1468bd;
+}

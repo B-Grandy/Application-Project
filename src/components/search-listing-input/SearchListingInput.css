@@ -1,0 +1,30 @@
+.search-box-bg{
+    height: 840px;
+    background-image: url('../../assets/images/houses-bg-homefinder.png');
+    width: 100%;
+    background-size:cover;
+    background-repeat: no-repeat;
+    padding: 16rem 15%;
+}
+
+@media only screen and (max-width: 600px) { /* For Mobile Screen */
+    .search-box-bg{
+        min-height: 650px;
+        padding: 12rem 1%;
+    }
+}
+@media only screen and (max-width: 900px) { /* For Mobile Screen */
+    .search-box-bg{
+        min-height: 600px;
+        padding: 14rem 3%;
+    }
+}
+@media only screen and (max-width: 1200px) { /* For Mobile Screen */
+    .search-box-bg{
+        min-height: 550px;
+        padding: 14rem 4%;
+    }
+}
+.wrap{
+    height: 600px;
+}

@@ -1,0 +1,73 @@
+
+.listing-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    align-items: stretch;
+}
+.form-row, .form-action-row{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    justify-content:flex-start;
+    border-radius: 8px;
+    padding: .5rem;
+}   
+.gray{
+    background-color: #FFF;
+}
+.btn-calculate{
+    margin-top: 1rem;
+}
+.label{
+    margin: 0 1rem;
+    font-weight: 700;
+    font-size: 1rem;
+    text-align:left;
+    padding-right: 1rem;
+}
+.form-error-text{
+    font-weight: 700;
+    font-size: .8rem;
+    color: #f83939;
+    margin: 0 0 2rem 0;
+}
+@media only screen and (min-width: 568px) { /* For LargeScreen */
+    
+        .form-row{
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+            align-items: flex-start;
+            justify-content: center;
+            
+        }
+        .form-action-row{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: .5rem;
+            margin-top: 2rem;
+          
+        }
+        input{
+            width: 100% !important;
+        }
+ 
+  }
+  .MuiInputBase-adornedEnd{
+    margin-right: .5rem !important;
+  }
+  .ck.ck-editor__editable_inline{
+    height: 240px !important;
+
+  }
+  .ck-reset{
+    width: 85% !important;
+  } 
+
+  .MuiToggleButtonGroup-root{
+    margin-top: .8rem;
+  }

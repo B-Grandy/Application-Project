@@ -1,0 +1,74 @@
+.formContainer {
+    width:500px;
+    text-align:left;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto 25rem auto;
+    padding: 35px 40px 25px 40px;
+    background-color: white;
+    box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+
+ 
+}
+
+@media only screen and (min-width: 992px) {
+    .formContainer {
+        width: 30%;
+        margin-bottom: 5rem;
+    }
+}
+@media (min-width: 1200px) { 
+    .formContainer {
+        width: 31%;
+        margin-bottom: 5rem;
+    }
+
+ }
+@media only screen and (max-width: 600px) { /* For Mobile Screen */
+    .formContainer {
+        width: 320px;
+        margin-bottom: 5rem;
+    }
+}
+
+.icon{
+    width: 32px;
+    height: 32px;
+    padding-right: 1rem;
+}
+.wrapper-logo{
+    min-height:220px;
+}
+
+.loginLogo {
+    display: flex;
+    width: 100%;
+    height: 220px;
+    margin: 0 auto;
+}
+.signUpLogo {
+    display: flex;
+    width: 100%;
+    height: 220px;
+    margin: 0 auto;
+}
+.bg {
+    background-image: url(../../../assets/images/HomeBackground.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index:2;
+    width: 100%;
+    height:100%;
+    padding-bottom: 10rem !important;
+   
+}
+.margin-break{
+    margin: 1rem;
+}
+
+.MuiButton-outlined {
+    text-transform: capitalize !important;
+  }

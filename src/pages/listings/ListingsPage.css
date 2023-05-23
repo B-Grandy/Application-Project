@@ -1,0 +1,10 @@
+@media (min-width: 1200px){
+.MuiContainer-root {
+    max-width: 1536px !important;
+}
+}
+.padding{
+    display:flex;
+    flex-direction: row;
+    margin: 0 auto;
+}

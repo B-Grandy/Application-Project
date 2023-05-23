@@ -1,0 +1,87 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.MuiAppBar-root{ /*header */
+  background-color: #FFF !important;
+  box-shadow: none !important;
+  border-bottom: 2px solid #e3e3e3;
+  color: #0a0b0b !important;
+
+}
+@media only screen and (max-width: 576px) { /* For Mobile Screen */
+  .MuiToolbar-root{ 
+    display:none;
+  }
+  .MuiToolbar-root {
+    min-height: 80px !important;
+  
+  }
+  
+}
+
+.MuiToolbar-root {
+  min-height: 80px !important;
+  padding-left: 10% !important;
+  padding-right: 10% !important;
+  
+  justify-content: space-between;
+}
+
+.MuiButton-textPrimary  {
+  color: #0d61b6 !important;
+  font-weight: 500 !important;
+  font-size: 1.2rem !important;
+  text-transform: capitalize !important;
+}
+.MuiInputBase-root, .MuiInput-underline{
+  background: #fff !important;
+  color: #000 !important;
+  border-radius: 8px !important;
+}
+.MuiInputLabel-root{
+  color:#000 !important;
+  font-weight: 700;
+}
+.MuiFormControl-root{
+  margin: .5rem 0 !important;
+}
+.MuiSlider-colorPrimary{
+  padding: 1rem 0;
+}
