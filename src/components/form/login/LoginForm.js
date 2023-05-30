@@ -2,16 +2,16 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import GoogleIcon from '../../../assets/images/google.svg';
 import FacebookIcon from '../../../assets/images/facebook.svg';
-import { Button, TextField, Link, Grid, Checkbox, FormControlLabel, Typography  } from "@mui/material";
+import { Button, TextField, Link, Grid, Checkbox, FormControlLabel, Typography } from "@mui/material";
 import { UserAuth } from '../../../contexts/auth/AuthContext';
-import {ErrorMessageConst } from '../../../constants/AppConstants';
+import { ErrorMessageConst } from '../../../constants/AppConstants';
 import '../login/LoginForm.css';
 
 import Logo from '../../logo/Logo';
 import HomeFinderLogo from '../../../assets/images/HomeFinder_Logo.svg';
 import CopyRightComponent from '../../copyright/CopyRightComponent';
 import ErrorComponent from '../../error/ErrorComponent';
-import {RoutesConst} from '../../../constants/AppConstants'
+import { RoutesConst } from '../../../constants/AppConstants'
 
 function LoginForm() {
   // Inject Context
@@ -39,11 +39,11 @@ function LoginForm() {
   const handleLogIn = async (e) => {
     e.preventDefault();
     try {
-      if(email.length > 0 && password.length > 0){
+      if (email.length > 0 && password.length > 0) {
         await LoginWithFirebaseAuth(email, password);
         navigate(RoutesConst.LISTING_ROUTE);
       }
-      else{
+      else {
         setIsError(true);
         setErrorMessage(ErrorMessageConst.INVALID_CREDENTIAL)
       }
@@ -59,7 +59,7 @@ function LoginForm() {
     try {
       await facebookSignIn();
     } catch (error) {
-         console.log(error);
+      console.log(error);
       setIsError(true);
       setErrorMessage(error.message);
 
@@ -68,7 +68,7 @@ function LoginForm() {
 
   useEffect(() => {
     if (user !== null && isError) {
-       // use hook to redirect to dashboard page upon successful login
+      // use hook to redirect to dashboard page upon successful login
       navigate(RoutesConst.LISTING_ROUTE);
     }
   }, [user, navigate, isError]);
@@ -76,17 +76,17 @@ function LoginForm() {
   return (
     <div className="bg">
       <div className="wrapper-logo">
-      <div className='initialLogo'>
-        <Logo
-          url={HomeFinderLogo}
-          mainLogo="loginLogo"
-        ></Logo>
+        <div className='initialLogo'>
+          <Logo
+            url={HomeFinderLogo}
+            mainLogo="loginLogo"
+          ></Logo>
         </div>
       </div>
       <div className="formContainer">
-      <div className="error-error">
-            {isError && <ErrorComponent message= {errorMessage} />}
-          </div>
+        <div className="error-error">
+          {isError && <ErrorComponent message={errorMessage} />}
+        </div>
         <form>
           <TextField
             margin="normal"
@@ -97,7 +97,7 @@ function LoginForm() {
             name="email"
             autoComplete="email"
             autoFocus
-            onChange = {(e) => setEmail(e.target.value)}
+            onChange={(e) => setEmail(e.target.value)}
           />
           <TextField
             margin="normal"
@@ -108,7 +108,7 @@ function LoginForm() {
             type="password"
             id="password"
             autoComplete="current-password"
-            onChange = {(e) => setPassword(e.target.value)}
+            onChange={(e) => setPassword(e.target.value)}
           />
           <FormControlLabel
             control={
@@ -134,15 +134,13 @@ function LoginForm() {
           <div className="margin-break"></div>
           <Grid
             container
-            spacing={2}
-            columns={16}
+            direction="row"
             justifyContent="space-between"
             alignItems="center"
           >
             <Grid
               item
-              sm={8}
-              justifyContent="flex-end"
+              paddingBottom={1}
             >
               <Button
                 variant="outlined"
@@ -157,12 +155,12 @@ function LoginForm() {
             </Grid>
             <Grid
               item
-              sm={8}
+              paddingBottom={1}
             >
               <Button
                 disabled={true} // Disabled the signin button temporarily, until fix is found.
                 variant="outlined"
-                onClick= {handleFacbookSignIn}
+                onClick={handleFacbookSignIn}
               >
                 <img
                   src={FacebookIcon}
